@@ -1,0 +1,32 @@
+package org.hangnm.javabrains;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.MessageSource;
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+
+public class DrawingApp {
+	@Autowired
+	private MessageSource messageSource;
+	public MessageSource getMessageSource() {
+		return messageSource;
+	}
+	public void setMessageSource(MessageSource messageSource) {
+		this.messageSource = messageSource;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Triangle triangle = new Triangle();
+		//BeanFactory factory = new XmlBeanFactory(new FileSystemResource("spring.xml"));
+		ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+
+		Shape shape = (Shape) context.getBean("circle");
+		
+		shape.draw();
+		System.out.println(this.messageSource.getMessage("greeting",null,"Default Greeting",null));
+	}
+
+}

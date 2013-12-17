@@ -1,0 +1,5 @@
+package org.hangnm.javabeans.model;
+
+public class Triangle {
+
+}

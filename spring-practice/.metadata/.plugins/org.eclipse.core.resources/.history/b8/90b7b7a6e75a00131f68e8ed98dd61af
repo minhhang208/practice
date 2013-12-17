@@ -1,0 +1,9 @@
+package org.hangnm.javabeans.service;
+
+import org.hangnm.javabeans.model.Circle;
+
+public class ShapeService {
+	private Circle circle;
+	private Triangle triangle;
+	
+}

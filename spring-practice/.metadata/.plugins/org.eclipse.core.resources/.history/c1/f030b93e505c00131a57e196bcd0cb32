@@ -1,0 +1,5 @@
+package org.hangnm.javabeans.service;
+
+public class ShapeServiceProxy extends ShapeService {
+
+}

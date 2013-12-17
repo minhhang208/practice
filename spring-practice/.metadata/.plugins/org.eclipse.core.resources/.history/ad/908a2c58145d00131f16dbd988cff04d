@@ -1,0 +1,14 @@
+package org.hangnm.javabrains;
+
+import org.hangnm.javabrains.model.Circle;
+import org.hangnm.javabrains.dao.jdbcDaoimpl;;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class jdbcDemo {
+	public static void main(String[] args) {
+		ApplicationContect ctx = new ClassPathXmlApplicationContext("spring.xml");
+		
+		Circle circle = new jdbcDaoimpl().getCircle(1);
+		System.out.println(circle.getName());
+	}
+}

@@ -1,0 +1,11 @@
+package org.hangnm.javabrains;
+
+import org.hangnm.javabrains.model.Circle;
+import org.hangnm.javabrains.dao.jdbcDaoimpl;;
+
+public class jdbcDemo {
+	public static void main(String[] args) {
+		Circle circle = new jdbcDaoimpl().getCircle(1);
+		System.out.println(circle.getName());
+	}
+}

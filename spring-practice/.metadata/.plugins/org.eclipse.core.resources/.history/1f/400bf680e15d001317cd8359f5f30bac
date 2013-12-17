@@ -1,0 +1,23 @@
+package org.hangnm.javabrains.dao;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class HibernateDaoImpl {
+	@Autowired
+	private SessionFactory sessionFactory;
+	public SessionFactory getSessionFactory() {
+		return sessionFactory;
+	}
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
+	public int getCircleCount(){
+		String sql = "SELECT COUNT(*) FROM CIRCLE";
+		getSessionFactory().openSession();
+		
+		return 1;
+		
+		
+	}
+}

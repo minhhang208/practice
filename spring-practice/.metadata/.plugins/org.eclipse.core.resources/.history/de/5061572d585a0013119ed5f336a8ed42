@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.1.xsd"
+>
+
+<!-- 	<bean id="triangle" class="org.hangnm.javabrains.Triangle" >
+		<property name="pointA" ref="pointA"/>
+		<property name="pointB" ref="pointB"/>
+		<property name="pointC" ref="pointC"/>
+	</bean>	 -->
+	<bean id = "pointA" class="org.hangnm.javabrains.Point">
+		<qualifier value="circleRelated"/>
+		<property name="x" value="${pointA.pointX}"></property>
+		<property name="y" value="${pointA.pointY}"></property>
+	</bean>
+	<bean id = "pointB" class="org.hangnm.javabrains.Point">
+		<property name="x" value="-20"></property>
+		<property name="y" value="0"></property>
+	</bean>
+	<bean id = "center" class="org.hangnm.javabrains.Point">
+		<property name="x" value="0"></property>
+		<property name="y" value="20"></property>
+	</bean>
+	<bean id="circle" class="org.hangnm.javabrains.Circle">
+
+	</bean>
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" >
+		<property name="locations" value="pointsconfig.properties"></property>
+	</bean>
+	<context:annotation-config/>
+	</beans>

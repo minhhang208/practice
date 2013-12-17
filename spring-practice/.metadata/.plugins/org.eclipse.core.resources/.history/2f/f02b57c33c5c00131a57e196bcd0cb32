@@ -1,0 +1,37 @@
+package org.hangnm.javabeans.aspect;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.AfterThrowing;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Pointcut;
+
+
+@Aspect
+public class LoggingAspect {
+	
+	@Before("allCircleMethod()")
+	public void loggingAdvice(JoinPoint jointPoint){
+		
+	}
+	@AfterReturning(pointcut="args(name)")
+	public void stringArgumentMethods(String name){
+		System.out.println("A method that takes String argument has been called. The value is " + name);
+	}
+	
+	@AfterThrowing("args(name)")
+	public void exceptionAdvice(String name){
+		System.out.println("Exception has been throwing");
+	}
+	
+	@Pointcut("execution(* get*(..))")
+	public void allGetters(){
+	}
+	
+	@Pointcut("within(org.hangnm.javabeans.model.Circle)")
+	public void allCircleMethod(){
+	}
+
+}

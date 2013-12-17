@@ -1,0 +1,7 @@
+package org.hangnm.javabrains.dao;
+
+import org.springframework.jdbc.core.simple.JdbcTemplate;
+
+public class SimpleJdbcDaoImpl extends JdbcTemplateDaoSupport {
+
+}

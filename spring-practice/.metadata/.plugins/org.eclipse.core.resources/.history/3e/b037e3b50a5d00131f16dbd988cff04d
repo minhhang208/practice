@@ -1,0 +1,9 @@
+package org.hangnm.javabrains;
+
+import org.hangnm.javabrains.model.Circle;
+
+public class jdbcDemo {
+	public static void main(String[] args) {
+		Circle circle = new jdbcDaoimpl().getCircle();
+	}
+}

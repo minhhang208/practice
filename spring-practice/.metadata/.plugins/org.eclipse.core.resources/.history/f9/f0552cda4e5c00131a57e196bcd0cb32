@@ -1,0 +1,7 @@
+package org.hangnm.javabeans.service;
+
+public class FactoryServer {
+	public Object getBean(){
+		
+	}
+}

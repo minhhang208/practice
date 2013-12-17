@@ -1,0 +1,8 @@
+package org.hangnm.javabrains.dao;
+
+public class HibernateDaoImpl {
+	public int getCircleCount(){
+		
+		
+	}
+}

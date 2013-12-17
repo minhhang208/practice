@@ -1,0 +1,9 @@
+package org.hangnm.javabeans.service;
+
+import org.hangnm.javabeans.model.Circle;
+
+	public class ShapeServiceProxy extends ShapeService {
+		public Circle getCircle() {
+			return super.getCircle();
+		}
+}

@@ -1,0 +1,13 @@
+package org.hangnm.javabrains;
+
+import org.springframework.context.ApplicationListener;
+
+public class MyEventListener implements ApplicationListener<ApplicationEvent>{
+
+	@Override
+	public void onApplicationEvent(ApplicationEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

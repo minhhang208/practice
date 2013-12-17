@@ -1,0 +1,7 @@
+package org.hangnm.javabeans;
+
+public class AopMain {
+	public static void main(String[] args) {
+		
+	}
+}

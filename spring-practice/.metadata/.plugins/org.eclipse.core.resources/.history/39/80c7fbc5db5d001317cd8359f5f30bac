@@ -1,0 +1,10 @@
+package org.hangnm.javabrains.dao;
+
+public class HibernateDaoImpl {
+	public int getCircleCount(){
+		String sql = "SELECT COUNT(*) FROM CIRCLE";
+		
+		return 	this.getJdbcTemplate().queryForInt(sql);
+		
+	}
+}

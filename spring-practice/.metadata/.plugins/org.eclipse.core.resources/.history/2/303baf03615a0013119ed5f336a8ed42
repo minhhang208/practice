@@ -1,0 +1,3 @@
+greeting=Hello!
+drawing.cicle=Draw a Circle
+drawing.point=Circle: Point is: " + center.getX() + ", " + center.getY()
